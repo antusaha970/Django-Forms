@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block mainContent %}
+    <section class="container">
+        <h1 class="my-5 text-center">Django Model form fileds</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-success">Submit</button>
+        </form>
+    </section>
+{% endblock mainContent %}
